@@ -1,25 +1,36 @@
-WEBSITE 20/10 YEU THUONG
+WEBSITE 20/10 YEU THUONG - BAN CAP NHAT
 
 Cau truc:
-- index.html: giao dien HTML
-- styles.css: CSS tuy chinh va animation
+- index.html: giao dien website va form tao thiep
+- styles.css: mau sac, bo cuc va hieu ung sticker roi
 - tailwind-config.js: cau hinh mau/font Tailwind
-- app.js: random loi chuc, loc danh muc, tao thiep, sao chep, chia se, hieu ung trai tim/canh hoa
+- app.js: doc Google Sheets, random loi chuc, tao thiep, sao chep, xuat PNG va sticker
 
 Cach chay:
 1. Giu cac file trong cung mot thu muc.
-2. Mo index.html bang trinh duyet.
-3. Can ket noi Internet de tai Tailwind CDN va Google Fonts.
+2. Chay qua localhost/hosting HTTPS de Clipboard hoat dong on dinh; mo index.html truc tiep van co the bi trinh duyet chan fetch Google Sheets.
+3. Can ket noi Internet de tai Tailwind, Google Fonts, html2canvas va sticker demo.
+
+GOOGLE SHEETS:
+- Website doc hai tab trong spreadsheet dang cau hinh trong app.js: Loi_chuc va Tao_loi_chuc.
+- Tab Loi_chuc dung cho phan "Thiep chuc", can cac cot: ID, Noi_dung_loi_chuc, Trang_thai. Moi dong trang thai 1 la loi chuc chung cho tat ca moi nguoi; khong can cot danh muc.
+- Tab Tao_loi_chuc dung cho phan "Tao thiep rieng", can cac cot: Danh_muc, Doi_tuong, Phong_cach, Mau_noi_dung, Cau_ket, Bien_can_thay, Trang_thai.
+- Trang_thai = 1 de hien loi chuc/mau; 0 de an. Dong co Trang_thai trong se duoc xem la dang hoat dong.
+- Tab Tao_loi_chuc: cac doi tuong loc theo Danh_muc; Phong_cach duoc lay tu cac gia tri duy nhat trong cot Phong_cach.
+- Mau_noi_dung ho tro bien dang {ten_nguoi_nhan}, {ten}, [TEN] va cac bien trong ngoac nhon/vuong; bien chua nhan dang se duoc thay bang ten nguoi nhan. Cau_ket duoc them vao cuoi loi chuc.
+- Chia se ca spreadsheet de "Anyone with the link / Bat ky ai co duong lien ket: Viewer / Nguoi xem".
+- Neu doi ten tab, cap nhat WISHES_SHEET_NAME hoac CUSTOM_TEMPLATES_SHEET_NAME trong app.js.
+
+Tao va tai thiep:
+- Chon ten, danh muc, doi tuong, phong cach roi nhan Tao loi chuc danh rieng.
+- Sao chep noi dung se sao chep thong diep da tao.
+- Tai thiep PNG se xuat khung thiep hien thi thanh anh PNG.
+- Sticker demo dung anh hoa tu Canva va emoji no/trai tim/buom; co the thay URL trong app.js hoac bo sung them URL anh sau.
+
+Nhac nen:
+- Nhac duoc tai tu access/theme music.mp3 va lap lai lien tuc.
+- Website thu tu phat nhac khi mo trang; trinh duyet co the chan tu phat, khi do nhan nut not nhac de bat.
+- Nut not nhac tren dau trang va nut "Am nhac" o chan trang dung de bat/tat nhac nen.
 
 Luu y:
-- Nut nhac nen hien dang la mo phong thong bao, chua phat file am thanh.
-- Mot so API nhu Clipboard/Web Share can HTTPS hoac localhost de hoat dong day du tren mot so trinh duyet.
-
-
-CAP NHAT DATABASE GOOGLE SHEETS
-- Website lay danh sach loi chuc ngau nhien tu Google Sheets (gid=0).
-- Sheet can co hang tieu de voi cac cot Ma_danh_muc, Noi_dung_loi_chuc; cot Trang_thai tuy chon (1 = hien, 0 = an).
-- Hay mo Share trong Google Sheets va chon Anyone with the link / Bat ky ai co duong lien ket: Viewer / Nguoi xem.
-- Neu van khong tai duoc, vao File > Share > Publish to web va xuat ban tab du lieu; sau do tai lai trang.
-- Chay website qua localhost hoac hosting HTTPS, khong nen mo truc tiep bang file:// vi trinh duyet co the chan fetch.
-- Cac mau cau trong khu vuc ca nhan hoa (chon giong dieu) van la mau noi dung rieng trong app.js; sheet hien tai chi co mot cot noi dung loi chuc nen chua du du lieu de thay the cac mau do.
+- Neu sheet khong tai duoc, hay kiem tra quyen chia se, ten tab va ket noi Internet.
