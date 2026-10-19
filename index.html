@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+
+
+
+<html class="scroll-smooth" lang="vi">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>20/10 Yêu Thương - Gửi Ngàn Lời Chúc Đến Người Phụ Nữ Việt Nam</title>
+
+  <!-- Google Fonts: Quicksand & Be Vietnam Pro -->
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Quicksand:wght@500;600;700&amp;display=swap"
+    rel="stylesheet" />
+
+  <!-- Material Symbols Outlined -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS v3 with Container Queries & Forms -->
+
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script src="tailwind-config.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+
+<body
+  class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-primary selection:text-white min-h-screen relative overflow-x-hidden">
+
+  <!-- Background decorative glows & petals container -->
+
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+
+    <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary-fixed/40 blur-3xl"></div>
+
+    <div class="absolute top-1/3 -right-32 w-[30rem] h-[30rem] rounded-full bg-secondary-fixed/50 blur-3xl"></div>
+
+    <div class="absolute -bottom-20 left-1/4 w-[28rem] h-[28rem] rounded-full bg-tertiary-fixed/40 blur-3xl"></div>
+
+    <div class="absolute inset-0" id="petal-container"></div>
+
+  </div>
+
+  <!-- SHARED COMPONENT: TopAppBar -->
+
+  <header
+    class="docked full-width top-0 sticky z-40 bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md shadow-sm">
+
+    <div class="flex justify-between items-center w-full px-4 md:px-8 max-w-7xl mx-auto h-16">
+
+      <!-- Leading Icon -->
+
+      <div class="flex items-center gap-2">
+
+        <button aria-label="Biểu tượng hoa"
+          class="w-10 h-10 rounded-full flex items-center justify-center text-primary dark:text-primary-fixed-dim hover:bg-primary-fixed/50 dark:hover:bg-primary-container/40 transition-colors duration-200 active:scale-95 transition-transform duration-150"
+          type="button">
+
+          <span class="material-symbols-outlined text-2xl" data-icon="local_florist" data-weight="fill"
+            style="font-variation-settings: 'FILL' 1;">local_florist</span>
+
+        </button>
+
+        <span
+          class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim font-bold tracking-tight">20/10
+          Yêu Thương</span>
+
+      </div>
+
+      <!-- Navigation links (Desktop) -->
+
+      <nav class="hidden md:flex items-center gap-6">
+
+        <a class="text-primary dark:text-primary-fixed-dim font-bold font-label-lg text-label-lg transition-colors duration-200"
+          href="#hero">Trang chủ</a>
+
+        <a class="text-on-surface-variant dark:text-outline-variant font-medium font-label-lg text-label-lg hover:text-primary transition-colors duration-200"
+          href="#wish-card">Thiệp chúc</a>
+
+        <a class="text-on-surface-variant dark:text-outline-variant font-medium font-label-lg text-label-lg hover:text-primary transition-colors duration-200"
+          href="#custom-card">Tạo thiệp riêng</a>
+
+      </nav>
+
+      <!-- Trailing Audio/Note Button -->
+
+      <div class="flex items-center gap-2">
+
+        <button
+          class="w-10 h-10 rounded-full flex items-center justify-center text-primary dark:text-primary-fixed-dim hover:bg-primary-fixed/50 dark:hover:bg-primary-container/40 transition-colors duration-200 active:scale-95 transition-transform duration-150 relative"
+          id="toggle-bg-music" title="Giai điệu yêu thương" type="button">
+
+          <span class="material-symbols-outlined text-2xl animate-spin text-primary" data-icon="music_note"
+            style="animation-duration: 8s;">music_note</span>
+
+          <span class="absolute -top-1 -right-1 flex h-3 w-3">
+
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+
+          </span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="w-full max-w-5xl mx-auto px-4 md:px-8 py-6 md:py-12 space-y-12 md:space-y-20">
+
+    <!-- HERO SECTION -->
+
+    <section class="text-center relative pt-4 pb-8 md:pt-10 md:pb-14 flex flex-col items-center" id="hero">
+
+      <!-- Top ribbon badge -->
+
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high/80 border border-secondary-fixed text-primary font-label-md text-label-md mb-6 shadow-sm">
+
+        <span class="material-symbols-outlined text-sm" data-icon="favorite" data-weight="fill"
+          style="font-variation-settings: 'FILL' 1;">favorite</span>
+
+        <span>Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10</span>
+
+        <span class="material-symbols-outlined text-sm" data-icon="sparkles" data-weight="fill"
+          style="font-variation-settings: 'FILL' 1;">arrow_back_ios_new</span>
+
+      </div>
+
+      <!-- Headline -->
+
+      <h1
+        class="font-headline-lg-mobile md:font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface tracking-tight mb-4 max-w-3xl">
+
+        20 THÁNG 10<br />
+
+        <span
+          class="text-primary font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Ngày
+          Phụ Nữ Việt Nam</span>
+
+      </h1>
+
+      <!-- Slogan -->
+
+      <p class="font-headline-md text-headline-md text-secondary font-semibold max-w-2xl mb-4 leading-relaxed">
+
+        Gửi đến một nửa thế giới những điều ngọt ngào nhất 💗
+
+      </p>
+
+      <!-- Paragraph description -->
+
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8 font-normal">
+
+        Bạn xứng đáng được yêu thương, trân trọng và hạnh phúc mỗi ngày. Hôm nay, hãy nhận một lời chúc thật đặc biệt
+        dành riêng cho bạn nhé!
+
+      </p>
+
+      <!-- CTA Button with Pulse & Heart Glow -->
+
+      <div class="relative">
+
+        <a class="pulse-romantic inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-primary to-primary-container text-white font-title-lg text-title-lg shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-1 transition-all duration-300"
+          href="#wish-card">
+
+          <span>Nhận lời chúc ngay</span>
+
+          <span class="material-symbols-outlined text-2xl" data-icon="mail">mail</span>
+
+        </a>
+
+      </div>
+
+      <!-- Decorative subtle floating visual tags -->
+
+      <div class="flex flex-wrap justify-center gap-3 mt-8 text-on-surface-variant/80 font-label-md text-label-md">
+
+        <span
+          class="px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm border border-pink-100 shadow-sm flex items-center gap-1">🌸
+          Nở nụ cười thật tươi</span>
+
+        <span
+          class="px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm border border-pink-100 shadow-sm flex items-center gap-1">🌷
+          Tỏa sáng theo cách riêng</span>
+
+        <span
+          class="px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm border border-pink-100 shadow-sm flex items-center gap-1">🎁
+          Đong đầy yêu thương</span>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION: TẤM THIỆP RANDOM & FILTER CATEGORIES -->
+
+    <section class="scroll-mt-24 space-y-6" id="wish-card">
+
+      <!-- Section Header -->
+
+      <div class="text-center space-y-2">
+
+        <h2
+          class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-bold">
+
+          💌 Tấm Thiệp Yêu Thương
+
+        </h2>
+
+        <p class="font-body-md text-body-md text-on-surface-variant">
+
+          Chọn đối tượng người nhận và cùng lan tỏa những tình cảm chân thành nhất
+
+        </p>
+
+      </div>
+
+      <!-- PILL CATEGORIES (Cuộn ngang mượt mà) -->
+
+      <div class="w-full overflow-x-auto no-scrollbar py-2">
+
+        <div class="flex items-center gap-2 md:gap-3 min-w-max px-2 mx-auto justify-start md:justify-center"
+          id="category-chips">
+
+          <!-- Dynamic Pills will be toggled by JS -->
+
+          <button
+            class="cat-pill active-pill px-4 py-2 rounded-full font-label-lg text-label-lg flex items-center gap-1.5 transition-all duration-200 bg-primary text-white shadow-md shadow-primary/20 scale-105"
+            data-cat="all">
+
+            <span>🌸</span> Tất cả
+
+          </button>
+
+          <button
+            class="cat-pill px-4 py-2 rounded-full font-label-lg text-label-lg flex items-center gap-1.5 transition-all duration-200 bg-white/80 hover:bg-surface-container-high text-on-surface border border-outline-variant/30"
+            data-cat="mom">
+
+            <span>👩</span> Dành cho Mẹ
+
+          </button>
+
+          <button
+            class="cat-pill px-4 py-2 rounded-full font-label-lg text-label-lg flex items-center gap-1.5 transition-all duration-200 bg-white/80 hover:bg-surface-container-high text-on-surface border border-outline-variant/30"
+            data-cat="lover">
+
+            <span>💕</span> Người yêu
+
+          </button>
+
+          <button
+            class="cat-pill px-4 py-2 rounded-full font-label-lg text-label-lg flex items-center gap-1.5 transition-all duration-200 bg-white/80 hover:bg-surface-container-high text-on-surface border border-outline-variant/30"
+            data-cat="friends">
+
+            <span>🫶</span> Bạn bè &amp; Chị em
+
+          </button>
+
+          <button
+            class="cat-pill px-4 py-2 rounded-full font-label-lg text-label-lg flex items-center gap-1.5 transition-all duration-200 bg-white/80 hover:bg-surface-container-high text-on-surface border border-outline-variant/30"
+            data-cat="colleague">
+
+            <span>🌷</span> Đồng nghiệp
+
+          </button>
+
+          <button
+            class="cat-pill px-4 py-2 rounded-full font-label-lg text-label-lg flex items-center gap-1.5 transition-all duration-200 bg-white/80 hover:bg-surface-container-high text-on-surface border border-outline-variant/30"
+            data-cat="funny">
+
+            <span>😂</span> Hài hước
+
+          </button>
+
+          <button
+            class="cat-pill px-4 py-2 rounded-full font-label-lg text-label-lg flex items-center gap-1.5 transition-all duration-200 bg-white/80 hover:bg-surface-container-high text-on-surface border border-outline-variant/30"
+            data-cat="selflove">
+
+            <span>✨</span> Yêu bản thân
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- MAIN CARD: TẤM THIỆP ĐIỆN TỬ SANG TRỌNG -->
+
+      <div class="glass-card-elevated rounded-xl p-6 md:p-10 relative overflow-hidden transition-all duration-300">
+
+        <!-- Faux ribbon & top seal -->
+
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-white rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+
+          <span class="material-symbols-outlined text-2xl" data-icon="favorite" data-weight="fill"
+            style="font-variation-settings: 'FILL' 1;">favorite</span>
+
+        </div>
+
+        <!-- Corner decorative floral accents -->
+
+        <div class="absolute top-3 left-4 text-primary-fixed-dim/70 pointer-events-none select-none">
+
+          <span class="material-symbols-outlined text-3xl" data-icon="local_florist">local_florist</span>
+
+        </div>
+
+        <div class="absolute top-3 right-4 text-primary-fixed-dim/70 pointer-events-none select-none">
+
+          <span class="material-symbols-outlined text-3xl" data-icon="local_florist">local_florist</span>
+
+        </div>
+
+        <div class="absolute bottom-3 left-4 text-primary-fixed-dim/70 pointer-events-none select-none">
+
+          <span class="material-symbols-outlined text-3xl" data-icon="local_florist">local_florist</span>
+
+        </div>
+
+        <div class="absolute bottom-3 right-4 text-primary-fixed-dim/70 pointer-events-none select-none">
+
+          <span class="material-symbols-outlined text-3xl" data-icon="local_florist">local_florist</span>
+
+        </div>
+
+        <div class="pt-4 text-center space-y-6">
+
+          <!-- Card Header & Badge -->
+
+          <div class="space-y-2">
+
+            <span class="font-label-md text-label-md tracking-wider text-primary uppercase font-bold">
+
+              💌 LỜI CHÚC DÀNH CHO BẠN 💌
+
+            </span>
+
+            <div>
+
+              <span
+                class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md"
+                id="current-category-badge">
+
+                🌸 Tất cả đối tượng
+
+              </span>
+
+            </div>
+
+          </div>
+
+          <!-- Lời chúc trung tâm lớn -->
+
+          <div class="min-h-[160px] md:min-h-[180px] flex items-center justify-center px-4 md:px-12">
+
+            <blockquote
+              class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-on-surface font-semibold leading-relaxed tracking-tight transition-all duration-300 transform scale-100 opacity-100"
+              id="wish-display">
+
+              "Chúc một nửa thế giới luôn ngập tràn niềm vui, tự tin sải bước và đón nhận vạn điều tốt lành trong ngày
+              20/10!"
+
+            </blockquote>
+
+          </div>
+
+          <!-- Signature / Wish counter tracker -->
+
+          <div class="flex items-center justify-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+
+            <span class="material-symbols-outlined text-base text-primary" data-icon="auto_awesome">auto_awesome</span>
+
+            <span id="wish-counter">Lời chúc số: 1 / 50+</span>
+
+          </div>
+
+          <hr class="border-outline-variant/30 w-3/4 mx-auto" />
+
+          <!-- ACTION BUTTONS CLUSTER -->
+
+          <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+
+            <!-- Nút đổi lời chúc -->
+
+            <button
+              class="flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-primary to-primary-container text-white font-label-lg text-label-lg shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/35 hover:-translate-y-0.5 active:scale-95 transition-all"
+              id="btn-next-wish" type="button">
+
+              <span class="material-symbols-outlined text-xl transition-transform duration-500" data-icon="refresh"
+                id="refresh-icon">refresh</span>
+
+              <span>Đổi lời chúc khác</span>
+
+            </button>
+
+            <!-- Nút sao chép -->
+
+            <button
+              class="flex items-center gap-2 px-4 py-3 rounded-full bg-white/80 hover:bg-surface-container-high border border-outline-variant/40 text-on-surface font-label-lg text-label-lg active:scale-95 transition-all"
+              id="btn-copy-wish" type="button">
+
+              <span class="material-symbols-outlined text-xl text-primary" data-icon="content_copy">content_copy</span>
+
+              <span>Sao chép</span>
+
+            </button>
+
+            <!-- Nút chia sẻ -->
+
+            <button
+              class="flex items-center gap-2 px-4 py-3 rounded-full bg-white/80 hover:bg-surface-container-high border border-outline-variant/40 text-on-surface font-label-lg text-label-lg active:scale-95 transition-all"
+              id="btn-share-wish" type="button">
+
+              <span class="material-symbols-outlined text-xl text-secondary" data-icon="share">share</span>
+
+              <span>Chia sẻ</span>
+
+            </button>
+
+            <!-- Nút thả tim phản ứng -->
+
+            <button
+              class="flex items-center gap-2 px-5 py-3 rounded-full bg-surface-container-high text-primary hover:bg-primary-fixed border border-secondary-fixed font-label-lg text-label-lg active:scale-95 transition-all"
+              id="btn-heart-burst" type="button">
+
+              <span class="material-symbols-outlined text-xl text-primary" data-icon="favorite" data-weight="fill"
+                style="font-variation-settings: 'FILL' 1;">favorite</span>
+
+              <span>Thả tim</span>
+
+              <span class="ml-1 text-xs px-2 py-0.5 rounded-full bg-primary text-white font-bold"
+                id="heart-count-badge">20</span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION: KHU VỰC CÁ NHÂN HÓA (CUSTOM CARD BUILDER) -->
+
+    <section class="scroll-mt-24 space-y-6" id="custom-card">
+
+      <div class="text-center space-y-2">
+
+        <div
+          class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-primary font-label-md text-label-md">
+
+          <span class="material-symbols-outlined text-sm" data-icon="edit_note">edit_note</span>
+
+          Thiết Kế Thiệp Độc Bản
+
+        </div>
+
+        <h2
+          class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-bold">
+
+          Gửi Yêu Thương Đến Ai Đó 💖
+
+        </h2>
+
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-lg mx-auto">
+
+          Điền tên người phụ nữ bạn thương quý để tạo nên bức thiệp riêng đầy ý nghĩa và ngọt ngào.
+
+        </p>
+
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+
+        <!-- FORM BUILDER -->
+
+        <div class="md:col-span-5 glass-card rounded-xl p-6 space-y-5">
+
+          <h3 class="font-title-lg text-title-lg text-on-surface font-semibold flex items-center gap-2">
+
+            <span class="material-symbols-outlined text-primary" data-icon="magic_button">magic_button</span>
+
+            <span>Thông tin người nhận</span>
+
+          </h3>
+
+          <div class="space-y-4">
+
+            <div>
+
+              <label class="block font-label-md text-label-md text-on-surface-variant mb-1.5"
+                for="input-recipient-name">
+
+                Tên hoặc cách gọi thân thương:
+
+              </label>
+
+              <input
+                class="w-full px-4 py-3 rounded-lg bg-white/80 border border-outline-variant/60 focus:border-primary focus:ring-4 focus:ring-primary/20 text-on-surface font-body-md outline-none transition-all placeholder:text-outline"
+                id="input-recipient-name" placeholder="Ví dụ: Mẹ yêu, Bé Thảo, Chị Trâm..." type="text" />
+
+            </div>
+
+            <div>
+
+              <label class="block font-label-md text-label-md text-on-surface-variant mb-1.5"
+                for="select-recipient-role">
+
+                Danh mục:
+
+              </label>
+
+              <select
+                class="w-full px-4 py-3 rounded-lg bg-white/80 border border-outline-variant/60 focus:border-primary focus:ring-4 focus:ring-primary/20 text-on-surface font-body-md outline-none transition-all"
+                id="select-recipient-role">
+
+                <option value="mom">Mẹ kính yêu 👩</option>
+
+                <option value="lover">Người yêu / Vợ ngọt ngào 💕</option>
+
+                <option value="friend">Bạn thân / Tri kỷ 🫶</option>
+
+                <option value="colleague">Đồng nghiệp / Sếp tuyệt vời 🌷</option>
+
+                <option value="sister">Chị gái / Em gái yêu thương 👧</option>
+
+                <option value="myself">Chính bản thân mình ✨</option>
+
+              </select>
+
+            </div>
+
+            <div>
+
+              <label class="block font-label-md text-label-md text-on-surface-variant mb-1.5"
+                for="select-recipient-role">
+
+                Đối tượng thân thiết:
+
+              </label>
+
+              <select
+                class="w-full px-4 py-3 rounded-lg bg-white/80 border border-outline-variant/60 focus:border-primary focus:ring-4 focus:ring-primary/20 text-on-surface font-body-md outline-none transition-all"
+                id="select-recipient-role">
+
+                <option value="mom">Mẹ kính yêu 👩</option>
+
+                <option value="lover">Người yêu / Vợ ngọt ngào 💕</option>
+
+                <option value="friend">Bạn thân / Tri kỷ 🫶</option>
+
+                <option value="colleague">Đồng nghiệp / Sếp tuyệt vời 🌷</option>
+
+                <option value="sister">Chị gái / Em gái yêu thương 👧</option>
+
+                <option value="myself">Chính bản thân mình ✨</option>
+
+              </select>
+
+            </div>
+
+            <div>
+
+              <label class="block font-label-md text-label-md text-on-surface-variant mb-1.5" for="select-wish-tone">
+
+                Phong cách lời chúc:
+
+              </label>
+
+              <select
+                class="w-full px-4 py-3 rounded-lg bg-white/80 border border-outline-variant/60 focus:border-primary focus:ring-4 focus:ring-primary/20 text-on-surface font-body-md outline-none transition-all"
+                id="select-wish-tone">
+
+                <option value="sincere">Chân thành &amp; Cảm động</option>
+
+                <option value="romantic">Lãng mạn &amp; Ngọt ngào</option>
+
+                <option value="joyful">Tươi vui &amp; Hài hước</option>
+
+                <option value="inspiring">Truyền cảm hứng &amp; Tự hào</option>
+
+              </select>
+
+            </div>
+
+            <button
+              class="w-full py-3.5 rounded-full bg-gradient-to-r from-primary to-primary-container text-white font-title-md text-title-md shadow-md shadow-primary/25 hover:shadow-lg hover:shadow-primary/40 active:scale-95 transition-all flex items-center justify-center gap-2"
+              id="btn-generate-custom" type="button">
+
+              <span class="material-symbols-outlined text-xl" data-icon="card_giftcard">card_giftcard</span>
+
+              <span>Tạo lời chúc dành riêng 💖</span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- PREVIEW THIỆP CÁ NHÂN HÓA -->
+
+        <div class="md:col-span-7">
+
+          <div
+            class="glass-card-elevated rounded-xl p-6 md:p-8 relative border-2 border-primary-fixed bg-gradient-to-b from-white/95 via-surface-container-low to-white/90 shadow-xl space-y-6"
+            id="custom-preview-card">
+
+            <!-- Envelope Stamp Decoration -->
+
+            <div class="flex items-center justify-between border-b border-outline-variant/30 pb-4">
+
+              <div class="flex items-center gap-2">
+
+                <span class="material-symbols-outlined text-2xl text-primary"
+                  data-icon="mark_email_read">mark_email_read</span>
+
+                <span class="font-label-lg text-label-lg text-primary font-bold">THIỆP MỪNG 20/10 ĐẶC BIỆT</span>
+
+              </div>
+
+              <span
+                class="text-xs px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">Bản Kỷ
+                Niệm</span>
+
+            </div>
+
+            <!-- Recipient Salutation -->
+
+            <div class="space-y-1">
+
+              <p class="font-label-md text-label-md text-on-surface-variant">Thân gửi đến:</p>
+
+              <h4 class="font-headline-md text-headline-md text-primary font-bold" id="preview-recipient-name">
+
+                Mẹ kính yêu
+
+              </h4>
+
+            </div>
+
+            <!-- Custom Message Body -->
+
+            <div class="bg-white/70 p-5 rounded-lg border border-pink-100 shadow-inner min-h-[140px] flex items-center">
+
+              <p class="font-body-lg text-body-lg text-on-surface leading-relaxed italic" id="preview-custom-body">
+
+                "Nhân ngày Phụ nữ Việt Nam 20/10, chúc Mẹ luôn dồi dào sức khỏe, an yên và tràn đầy tiếng cười. Cảm ơn
+                Mẹ vì tất cả những hy sinh thầm lặng và tình yêu thương vô bờ bến dành cho gia đình!"
+
+              </p>
+
+            </div>
+
+            <!-- Card Bottom Stamp & Action -->
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+
+              <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+
+                <span class="material-symbols-outlined text-primary text-sm" data-icon="verified">verified</span>
+
+                <span>Trao gửi trọn vẹn tình cảm • 20.10.2024</span>
+
+              </div>
+
+              <div class="flex items-center gap-2 w-full sm:w-auto">
+
+                <button
+                  class="w-full sm:w-auto px-4 py-2 rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-white border border-primary/20 font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 active:scale-95"
+                  id="btn-copy-custom" type="button">
+
+                  <span class="material-symbols-outlined text-sm" data-icon="content_copy">content_copy</span>
+
+                  <span>Sao chép thiệp này</span>
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION: BENTO GALLERY / 3 ĐIỀU NGỌT NGÀO DÀNH CHO PHÁI ĐẸP -->
+
+    <section class="space-y-6">
+
+      <div class="text-center space-y-2">
+
+        <h2
+          class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-bold">
+
+          Góc Yêu Thương &amp; Tôn Vinh
+
+        </h2>
+
+        <p class="font-body-md text-body-md text-on-surface-variant">
+
+          Dành chút thời gian để gửi lời tri ân sâu sắc tới người phụ nữ quan trọng của bạn
+
+        </p>
+
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Card 1 -->
+
+        <div class="glass-card rounded-lg p-6 space-y-4 hover:-translate-y-1 transition-transform duration-300">
+
+          <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+
+            <span class="material-symbols-outlined text-2xl" data-icon="spa" data-weight="fill"
+              style="font-variation-settings: 'FILL' 1;">spa</span>
+
+          </div>
+
+          <h3 class="font-title-lg text-title-lg font-bold text-on-surface">Tôn vinh sự kiên cường</h3>
+
+          <p class="font-body-md text-body-md text-on-surface-variant">
+
+            Phụ nữ Việt Nam luôn là biểu tượng của lòng dịu dàng, đức hy sinh cùng sự kiên cường bền bỉ trong từng chặng
+            đường cuộc sống.
+
+          </p>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="glass-card rounded-lg p-6 space-y-4 hover:-translate-y-1 transition-transform duration-300">
+
+          <div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+
+            <span class="material-symbols-outlined text-2xl" data-icon="volunteer_activism" data-weight="fill"
+              style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+
+          </div>
+
+          <h3 class="font-title-lg text-title-lg font-bold text-on-surface">Lan tỏa sự thấu hiểu</h3>
+
+          <p class="font-body-md text-body-md text-on-surface-variant">
+
+            Một lời chúc ấm áp hay một cử chỉ ân cần hôm nay có thể sưởi ấm tâm hồn và mang lại nụ cười rạng ngời suốt
+            cả tuần.
+
+          </p>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="glass-card rounded-lg p-6 space-y-4 hover:-translate-y-1 transition-transform duration-300">
+
+          <div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+
+            <span class="material-symbols-outlined text-2xl" data-icon="celebration" data-weight="fill"
+              style="font-variation-settings: 'FILL' 1;">celebration</span>
+
+          </div>
+
+          <h3 class="font-title-lg text-title-lg font-bold text-on-surface">Tự hào là chính mình</h3>
+
+          <p class="font-body-md text-body-md text-on-surface-variant">
+
+            Hãy luôn yêu thương chính mình, tự tin theo đuổi ước mơ và tự hào với bông hoa độc bản đầy hương sắc mà bạn
+            đang là.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- SHARED COMPONENT: Footer -->
+
+  <footer
+    class="w-full rounded-t-lg bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant/40 dark:border-outline/30 mt-16">
+
+    <div
+      class="w-full max-w-7xl mx-auto px-4 md:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+
+      <!-- Brand & Copyright text -->
+
+      <div class="space-y-1">
+
+        <div
+          class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim font-semibold flex items-center justify-center md:justify-start gap-2">
+
+          <span class="material-symbols-outlined text-primary" data-icon="favorite" data-weight="fill"
+            style="font-variation-settings: 'FILL' 1;">favorite</span>
+
+          <span>20/10 Yêu Thương</span>
+
+        </div>
+
+        <p class="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant">
+
+          © 2024 Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 • Gửi trọn yêu thương
+
+        </p>
+
+        <p class="text-xs text-on-surface-variant/70">
+
+          Made with 💗 dành tặng tất cả những người phụ nữ tuyệt vời. Chúc mừng ngày Phụ nữ Việt Nam 20/10 🌷
+
+        </p>
+
+      </div>
+
+      <!-- Links defined in Shared Components JSON -->
+
+      <div class="flex flex-wrap items-center justify-center gap-6">
+
+        <a class="text-primary dark:text-primary-fixed-dim font-semibold font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200"
+          href="#hero">Trang chủ</a>
+
+        <a class="text-on-surface-variant dark:text-outline-variant font-normal font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200"
+          href="#wish-card">Bộ sưu tập thiệp</a>
+
+        <a class="text-on-surface-variant dark:text-outline-variant font-normal font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200"
+          href="#custom-card">Lời chúc ý nghĩa</a>
+
+        <button
+          class="text-on-surface-variant dark:text-outline-variant font-normal font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 flex items-center gap-1"
+          id="footer-music-link" type="button">
+
+          <span class="material-symbols-outlined text-sm" data-icon="music_note">music_note</span> Âm nhạc
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- FLOATING FLOATING BACK TO TOP BUTTON -->
+
+  <button
+    class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-white/90 backdrop-blur-md text-primary border border-primary-fixed shadow-lg shadow-primary/20 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-primary hover:text-white z-30 active:scale-95"
+    id="btn-back-to-top" title="Lên đầu trang" type="button">
+
+    <span class="material-symbols-outlined text-2xl" data-icon="arrow_upward">arrow_upward</span>
+
+  </button>
+
+  <!-- TOAST NOTIFICATION POPUP -->
+
+  <div
+    class="fixed top-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none transition-all duration-300 opacity-0 transform -translate-y-4"
+    id="toast-notification">
+
+    <div
+      class="flex items-center gap-2 px-5 py-3 rounded-full bg-on-surface text-white shadow-xl font-label-lg text-label-lg backdrop-blur-md">
+
+      <span class="material-symbols-outlined text-primary-fixed text-xl" data-icon="check_circle" data-weight="fill"
+        style="font-variation-settings: 'FILL' 1;">check_circle</span>
+
+      <span id="toast-message">Đã sao chép lời chúc yêu thương! 💕</span>
+
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT: LỜI CHÚC & TƯƠNG TÁC -->
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>

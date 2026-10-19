@@ -1,0 +1,203 @@
+tailwind.config = {
+  darkMode: "class",
+
+  theme: {
+    extend: {
+      colors: {
+        "primary-fixed-dim": "#ffb1c8",
+
+        "on-background": "#311020",
+
+        "on-primary-container": "#fffbff",
+
+        "on-tertiary-fixed-variant": "#494458",
+
+        "secondary-fixed-dim": "#ffb0cc",
+
+        "surface-dim": "#ffcce0",
+
+        "surface-bright": "#fff8f8",
+
+        "on-tertiary": "#ffffff",
+
+        "surface-container": "#ffe8ef",
+
+        error: "#ba1a1a",
+
+        "on-primary": "#ffffff",
+
+        outline: "#887177",
+
+        tertiary: "#5f596e",
+
+        "on-primary-fixed-variant": "#861949",
+
+        "on-tertiary-container": "#fffbff",
+
+        "on-surface": "#311020",
+
+        "surface-container-lowest": "#ffffff",
+
+        "surface-tint": "#a53361",
+
+        "surface-container-highest": "#ffd8e6",
+
+        "inverse-primary": "#ffb1c8",
+
+        "on-surface-variant": "#554147",
+
+        "on-secondary-fixed": "#3e0021",
+
+        "surface-variant": "#ffd8e6",
+
+        "on-secondary-container": "#7b3152",
+
+        "on-error-container": "#93000a",
+
+        "on-secondary": "#ffffff",
+
+        "inverse-surface": "#492536",
+
+        secondary: "#934465",
+
+        surface: "#fff8f8",
+
+        primary: "#a2315f",
+
+        "secondary-container": "#ff9fc3",
+
+        "error-container": "#ffdad6",
+
+        "on-secondary-fixed-variant": "#762d4d",
+
+        "primary-fixed": "#ffd9e2",
+
+        background: "#fff8f8",
+
+        "inverse-on-surface": "#ffecf1",
+
+        "tertiary-fixed": "#e7def8",
+
+        "tertiary-container": "#787188",
+
+        "tertiary-fixed-dim": "#cbc3dc",
+
+        "on-primary-fixed": "#3e001d",
+
+        "secondary-fixed": "#ffd9e4",
+
+        "on-error": "#ffffff",
+
+        "outline-variant": "#dbc0c6",
+
+        "on-tertiary-fixed": "#1d192b",
+
+        "surface-container-low": "#fff0f3",
+
+        "primary-container": "#c14a77",
+
+        "surface-container-high": "#ffe0eb",
+      },
+
+      borderRadius: {
+        DEFAULT: "1rem",
+
+        lg: "2rem",
+
+        xl: "3rem",
+
+        full: "9999px",
+      },
+
+      spacing: {
+        "space-xl": "2.5rem",
+
+        "space-lg": "1.5rem",
+
+        gutter: "1.5rem",
+
+        "gutter-mobile": "1rem",
+
+        "space-xs": "0.25rem",
+
+        margin: "2rem",
+
+        "margin-mobile": "1.25rem",
+
+        "space-sm": "0.5rem",
+
+        "space-md": "1rem",
+      },
+
+      fontFamily: {
+        "label-md": ["Be Vietnam Pro"],
+
+        "body-md": ["Be Vietnam Pro"],
+
+        "headline-md": ["Quicksand"],
+
+        "display-lg": ["Quicksand"],
+
+        "body-sm": ["Be Vietnam Pro"],
+
+        "title-md": ["Be Vietnam Pro"],
+
+        "display-lg-mobile": ["Quicksand"],
+
+        "label-lg": ["Be Vietnam Pro"],
+
+        "headline-lg-mobile": ["Quicksand"],
+
+        "body-lg": ["Be Vietnam Pro"],
+
+        "headline-lg": ["Quicksand"],
+
+        "title-lg": ["Be Vietnam Pro"],
+      },
+
+      fontSize: {
+        "label-md": [
+          "12px",
+          { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" },
+        ],
+
+        "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+
+        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+
+        "display-lg": [
+          "52px",
+          { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "700" },
+        ],
+
+        "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+
+        "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }],
+
+        "display-lg-mobile": [
+          "36px",
+          { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "700" },
+        ],
+
+        "label-lg": [
+          "14px",
+          { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" },
+        ],
+
+        "headline-lg-mobile": [
+          "28px",
+          { lineHeight: "36px", fontWeight: "600" },
+        ],
+
+        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+
+        "headline-lg": [
+          "36px",
+          { lineHeight: "46px", letterSpacing: "-0.01em", fontWeight: "600" },
+        ],
+
+        "title-lg": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+      },
+    },
+  },
+};
